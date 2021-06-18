@@ -1,0 +1,62 @@
+
+<%- include('../_header') %> 
+
+
+<form action="/api/admin/add_products" method="POST">
+    <div style="width: 50%; margin: auto; " id="login">
+
+        <div id="regTitle">
+            <h2 style="text-align: center; color: blue;">Add Product Page</h2>
+            
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Code</label>
+            <input type="text" name="code" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Title</label>
+            <input type="text" name="title" class="form-control" id="exampleInputPassword1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Descript</label>
+            <input type="text" class="form-control" name="descript" id="exampleInputPassword1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Image</label>
+            <input type="text" class="form-control" name="iamge" id="exampleInputPassword1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Price</label>
+            <input type="text" class="form-control" name="price" id="exampleInputPassword1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="categoryName">Category Name:</label>
+
+            <select name="categoryName" id="cars">
+            <% for(let i = 0; i< categories.length; i++) { %>
+              <option value="<%= categories[i].name  %>"><%= categories[i].name  %></option>
+            <% } %>
+            </select>
+           
+          </div>
+     
+            <button style="margin-left:40% ; margin-top: 20px;" id="btnRegister" type="submit" class="btn btn-primary">Add New Product</button>
+        
+          </div>
+         
+
+    </div>
+ </form>
+
+
+
+
+
+
+
+<%- include('../_footer') %> 

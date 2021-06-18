@@ -20,7 +20,6 @@ var users = new mongoose.Schema({
         required: true,
         unique: true
     },
-    gender: String,
     phone : {
         type: String,
         required : true

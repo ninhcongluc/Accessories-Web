@@ -1,0 +1,71 @@
+
+<%- include('../_header') %> 
+<header id="header">
+    <nav>
+        <div class="container">
+            <div class="text-center">
+               <h2 style="font-family: 'Times New Roman', Times, serif; color: rgb(170, 112, 112); margin-top: 20px; ">Users Management Page</h2>
+               <p style="color: rgb(216, 169, 169); font-style: italic;">Can change user information faster</p>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-na d-flex-justify-between">
+            <a href="/admin/users/add" class="border-shadow">
+                <span class="text-gradient">New User <i class="fas fa-users"></i></span>
+            </a>
+        </div>
+        <!--form handling-->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Tools</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i< users.length; i++) { %>
+                        <tr>
+                            <td><%= i+ 1 %></td>
+                            <td><%= users[i].username %></td>
+                            <td><%= users[i].password %></td>
+                            <td><%= users[i].name %></td>
+                            <td><%= users[i].email  %></td>
+                            <td><%= users[i].phone  %></td>
+                        <td>
+                            <a href="/admin/update-user?id=<%= users[i]._id %>" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pen-alt"></i></span>
+                            </a>
+                            <form  action='/api/users/<%= users[i]._id %>?_method=DELETE' method = 'POST'>
+                            <button type= "submit" id="deleteBtn"  class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </button>       
+                            </form>
+                            
+                        </td>
+
+                        </tr>
+                      
+                    <% } %>
+                    
+                </tbody>             
+
+            </table>
+        </form>
+     
+    </div>
+</main>
+
+
+<%- include('../_footer') %> 

@@ -1,3 +1,58 @@
-h1{ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#login { 
+    width: 50%;
+    margin: 0 auto;
+    margin-top:  50px;
+    
+
+}
+
+
+#btnLogin {
+    margin-top: 10px;
+    background-color:  black;
+}
+#btnLogin:hover{ 
+    background-color: green;
+}
+
+#linkRegister {
+    margin-left: 15px;
+    text-decoration: none;
+    
+}
+
+#linkRegister:hover{
     color: red;
+}
+
+#regTitle {
+    text-align: center;
+    color: rgb(226, 201, 101);
+    font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+label { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: initial;
+    
+}
+
+#btnRegister { 
+    width: 100%;
+    margin-top: 10px;
+    background-color: lightcoral;
+}
+
+#btnRegister:hover {
+    background-color: lightgreen;
 }

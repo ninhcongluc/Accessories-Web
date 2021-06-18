@@ -1,0 +1,65 @@
+
+<%- include('../_header') %> 
+<header id="header">
+    <nav>
+        <div class="container">
+            <div class="text-center">
+               <h2 style="font-family: 'Times New Roman', Times, serif; color: rgb(116, 116, 187); margin-top: 20px; ">Categories Management Page</h2>
+               <p style="color:rgb(92, 92, 151); font-style: italic;">Can change categories information faster</p>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-na d-flex-justify-between">
+            <a href="/admin/categories/add" class="border-shadow">
+                <span class="text-gradient">New Category <i class="fas fa-users"></i></span>
+            </a>
+        </div>
+        <!--form handling-->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Tools</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i< categories.length; i++) { %>
+                        <tr>
+                            <td><%= i+ 1 %></td>
+                            <td><%= categories[i].name %></td>
+                            
+                        <td>
+                            <a href="/admin/update-categories?id=<%= categories[i]._id %>" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pen-alt"></i></span>
+                            </a>
+                            <form  action='/api/categories/<%= categories[i]._id %>?_method=DELETE' method = 'POST'>
+                            <button type= "submit" id="deleteBtn"  class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </button>       
+                            </form>
+                            
+                        </td>
+
+                        </tr>
+                      
+                    <% } %>
+                  
+                    
+                </tbody>             
+
+            </table>
+        </form>
+     
+    </div>
+</main>
+
+
+<%- include('../_footer') %> 

@@ -14,7 +14,7 @@ app.use(bodyparser.urlencoded({extended: true}))
 
 dotenv.config({path: 'config.env'})
 // override method
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
 
 // set view engine 
 app.set("view engine" , "ejs")
