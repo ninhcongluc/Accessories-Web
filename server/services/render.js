@@ -11,8 +11,31 @@ exports.registerRoutes = (req,res) => {
 
 
 exports.homeRoutes = (req,res) => {
-    res.render('home')
+    axios.get('http://localhost:3030/api/products')
+    .then(products => {
+        res.render('home', {products : products.data})
+    })
+    .catch(err => {
+        res.send(err)
+    })
+    
+    
 }
+
+
+exports.detailRoutes = (req,res) => {
+    axios.get('http://localhost:3030/api/products', {params: {id: req.query.id}})
+    .then((product) => {
+       res.render('detail', {product : product.data});
+       console.log(product)
+    })
+    .catch(err => {
+        res.send(err)
+    })
+    
+    
+}
+
 
 exports.adminRoutes = (req,res) => {
     res.render('admin')

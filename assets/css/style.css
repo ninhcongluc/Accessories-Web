@@ -56,3 +56,100 @@ label {
 #btnRegister:hover {
     background-color: lightgreen;
 }
+
+
+.card-course-item {
+    height: 100%;
+    margin-top: 20px;
+  }
+  
+  .user-avatar {
+    width:  30px;
+    height: 30px;
+    border-radius:50%;
+    margin-right: 4px;
+  }
+  
+  
+  #wrapper {
+    overflow-x: hidden;
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+  
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+      margin-left: -15rem;
+      
+    }
+  }
+  
+  .video {
+    margin-left:25%;
+    margin-top: 30px;
+  }
+  #course-description {
+    margin-top: 30px;
+    margin-left:15%;
+    color: red;
+    text-align: center;
+  }
+  
+  .course-name {
+    background-color: antiquewhite;
+  }
+  
+  #course-name{
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .d-flex {
+    background-color:rgb(224, 209, 209);
+  }
+  
+  .card-btn { 
+    text-align: center;
+    margin-left:25%;
+    margin-top: 10px;
+    background-color: rgb(125, 125, 177);
+  
+  }
+
+
+  #homeTitle{
+      font-size: 15px;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(218, 148, 57);
+  }

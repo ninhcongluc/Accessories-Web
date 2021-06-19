@@ -16,6 +16,8 @@ route.get('/login', services.loginRoutes )
 route.get('/register', services.registerRoutes )
 
 route.get('/home', services.homeRoutes )
+route.get('/home/detail', services.detailRoutes )
+
 route.get('/admin', services.adminRoutes )
 //ADMIN for USERS
 route.get('/admin/users', services.adminUserRoutes )
