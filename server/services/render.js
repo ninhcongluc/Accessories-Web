@@ -22,6 +22,17 @@ exports.homeRoutes = (req,res) => {
     
 }
 
+exports.getHomeSearch = (req,res) => {
+    axios.get('http://localhost:3030/api/products/search')
+    .then(products => {
+        res.render('home', {products : products.data})
+    })
+    .catch(err => {
+        res.send(err)
+    })
+    
+    
+}
 
 exports.detailRoutes = (req,res) => {
     axios.get('http://localhost:3030/api/products', {params: {id: req.query.id}})

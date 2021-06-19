@@ -60,6 +60,24 @@ exports.find = (req,res) => {
 
 }
 
+//find by Name
+exports.findName = (req,res) => {
+    const key = req.body.searchByName;
+ 
+     Product.find({name : key})
+    .then(products => {
+        res.render('home' , {products: products})
+        
+    }) 
+    .catch(err => {
+        res.status(500).send({message: err.message || 'Error occured while retriving user information'})
+    })
+        
+    
+
+}
+
+
 
 exports.updateProduct = (req, res) => {
     if(!req.body){

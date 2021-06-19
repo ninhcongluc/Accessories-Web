@@ -7,8 +7,16 @@
     <div class="border-end bg-white" id="sidebar-wrapper">
       <div class="sidebar-heading border-bottom bg-light"><img
           src="https://static.toiimg.com/thumb/msid-67586673,width-800,height-600,resizemode-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg"
-          alt="img" class="user-avatar"> <p id="homeTitle">Hello, let buy for your pet <i class="fas fa-grin-hearts"></i></p>   </div>
+          alt="img" class="user-avatar"> <p id="homeTitle">Hello, let buy for your pet <i class="fas fa-grin-hearts"></i></p> 
+             <form action="/api/products/search" method="POST">
+                <input name="searchByName" style="width:50% ;height: 30px;" type="text">
+                <button type="submit" style="margin-left: 3px; font-size: 18px; border-radius: 0.2rem; color: white;
+                background-color: black;">Search</button> 
+             </form>
+      </div>
+               
       <div class="list-group list-group-flush">
+         
   
         <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/admin">Admin Manager <i class="fas fa-users-cog"></i></a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3"

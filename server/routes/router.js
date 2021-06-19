@@ -79,4 +79,7 @@ route.put('/api/products/:id', productController.updateProduct)
 //delete category
 route.delete('/api/products/:id', productController.deleteProduct)
 
+// search product
+route.post('/api/products/search', productController.findName) 
+
 module.exports = route
